@@ -18,4 +18,4 @@ async def create_content(request: ContentRequest):
     print(f"타입: {request.content_type}")
     print("---------------------------------------")
     result = AIService.generate_naver_blog(request.title, request.user_input, request.content_type)
-    return {"status": "success", "generated_text": result}
+    return result
